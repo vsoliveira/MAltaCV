@@ -328,6 +328,17 @@ boxrule=2pt,arc=0pt,boxsep=2pt,left=2pt,right=2pt,top=2pt,bottom=2pt}
   \smallskip\normalsize\color{body}
 }
 
+\newcommand{\cvexperienceptBR}[5]{%
+  \smallskip
+  {\large\color{accent_body}\textbf{#1}\par}
+  \smallskip
+  \ifstrequal{#2}{}{}{{\color{secondary_body}\small{\faBuilding\hspace{0.5em}#2}}\hspace{1em}}
+  \ifstrequal{#3}{}{}{{\color{secondary_body}\small{\faCalendar\hspace{0.5em}#3}}\hspace{1em}}%
+  \ifstrequal{#4}{}{}{{\color{secondary_body}\small{\faMapMarker\hspace{0.5em}#4}}\hspace{1em}}\par
+  \ifstrequal{#5}{}{}{\color{secondary_body}\textbf{\small Palavras-chave:} \textit{#5}\par}
+  \smallskip\normalsize\color{body}
+}
+
 \newcommand{\cvlistitem}[2]{%
 {\bfseries\color{accent_body}{#1}}\\
 \ifstrequal{#2}{}{}{\itshape\color{secondary_body}{#2}}\color{body}\par
